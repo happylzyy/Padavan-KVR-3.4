@@ -31,7 +31,7 @@ endif
 go_build:
 	mkdir -p $(THISDIR)/go
 	( if [ ! -f $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ]; then \
-	curl --create-dirs -L https://dl.google.com/go/go$(go_version).linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
+	curl --create-dirs -L https://github.com/actions/go-versions/releases/download/1.20.0-4072132786/go-1.20.0-linux-x64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
